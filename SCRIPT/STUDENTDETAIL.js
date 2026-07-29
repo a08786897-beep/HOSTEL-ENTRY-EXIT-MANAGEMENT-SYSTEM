@@ -263,12 +263,17 @@ const students = [
     }
 ];
 
-// print the student details
-const details = document.querySelector('.card');
-let html = "";
 
-students.forEach((student) => {
-    html += `
+
+
+// print the student details
+
+function printdetails() {
+    const details = document.querySelector('.card');
+    let html = "";
+
+    students.forEach((student) => {
+        html += `
     <div class="card mb-3">
         <div class="row no-gutters">
             <div class="col-md-4">
@@ -287,6 +292,9 @@ students.forEach((student) => {
         </div>
     </div>
     `;
-});
+    });
 
-details.innerHTML = html;
+    details.innerHTML = html;
+}
+
+printdetails();
