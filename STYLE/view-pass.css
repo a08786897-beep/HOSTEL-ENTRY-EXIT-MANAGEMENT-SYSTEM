@@ -1,0 +1,397 @@
+/*==================================================
+                GOOGLE FONT
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==================================================
+                GLOBAL
+==================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#eef4ff,#f7fbff,#edf6ff);
+
+    color:#1E293B;
+
+    overflow-x:hidden;
+
+}
+
+/*==================================================
+                NAVBAR
+==================================================*/
+
+.navbar{
+
+    margin:20px;
+
+    padding:18px 30px!important;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.92)!important;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.navbar h3{
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+/*==================================================
+                BUTTONS
+==================================================*/
+
+.btn{
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:12px 24px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+}
+
+.btn-success{
+
+    background:linear-gradient(135deg,#10B981,#34D399);
+
+}
+
+.btn-dark{
+
+    background:linear-gradient(135deg,#1E293B,#334155);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(79,70,229,.30);
+
+}
+
+/*==================================================
+                CARDS
+==================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    position:relative;
+
+    transition:.35s;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(79,70,229,.18);
+
+}
+
+/*==================================================
+                SHINING EFFECT
+==================================================*/
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    animation:shine 6s infinite;
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        left:180%;
+
+    }
+
+}
+
+/*==================================================
+                CARD HEADER
+==================================================*/
+
+.card-header{
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED)!important;
+
+    border:none;
+
+    padding:18px 22px;
+
+}
+
+.card-header h5{
+
+    color:white;
+
+    font-weight:600;
+
+    margin:0;
+
+}
+
+/*==================================================
+                CARD BODY
+==================================================*/
+
+.card-body{
+
+    padding:30px;
+
+}
+
+/*==================================================
+                DETAILS
+==================================================*/
+
+.card-body p{
+
+    background:#F8FAFC;
+
+    padding:14px 18px;
+
+    border-left:5px solid #4F46E5;
+
+    border-radius:12px;
+
+    margin-bottom:14px;
+
+    transition:.3s;
+
+}
+
+.card-body p:hover{
+
+    background:#EEF2FF;
+
+    transform:translateX(6px);
+
+}
+
+.card-body b{
+
+    color:#1E293B;
+
+}
+
+/*==================================================
+                HEADINGS
+==================================================*/
+
+h5{
+
+    font-weight:700;
+
+}
+
+h6{
+
+    font-weight:600;
+
+}
+
+/*==================================================
+                STATUS SECTION
+==================================================*/
+
+.row.text-center .col-md-4{
+
+    padding:20px;
+
+    border-radius:16px;
+
+    transition:.35s;
+
+}
+
+.row.text-center .col-md-4:hover{
+
+    background:#F8FAFC;
+
+    transform:translateY(-5px);
+
+}
+
+/*==================================================
+                BADGES
+==================================================*/
+
+.badge{
+
+    padding:8px 18px;
+
+    font-size:14px;
+
+    border-radius:30px;
+
+}
+
+/*==================================================
+                HR
+==================================================*/
+
+hr{
+
+    border-top:2px dashed #D6DBE7;
+
+}
+
+/*==================================================
+                CONTAINER
+==================================================*/
+
+.container{
+
+    animation:fade .7s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+                BUTTON AREA
+==================================================*/
+
+.text-center{
+
+    margin-top:35px;
+
+}
+
+/*==================================================
+                SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(#4F46E5,#7C3AED);
+
+    border-radius:20px;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .navbar{
+
+        margin:10px;
+
+        padding:15px!important;
+
+    }
+
+    .card{
+
+        margin-bottom:20px;
+
+    }
+
+    .btn-lg{
+
+        width:100%;
+
+        margin-bottom:15px;
+
+    }
+
+}

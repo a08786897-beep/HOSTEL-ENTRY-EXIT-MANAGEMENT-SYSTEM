@@ -1,0 +1,586 @@
+/*====================================================
+                    GOOGLE FONT
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*====================================================
+                    BODY
+====================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#eef4ff,#f8fbff,#edf7ff);
+
+    color:#1e293b;
+
+}
+
+
+
+/*====================================================
+                NAVBAR
+====================================================*/
+
+.navbar{
+
+    background:rgba(255,255,255,.85)!important;
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    margin:20px;
+
+    padding:18px 30px!important;
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.navbar h3{
+
+    font-weight:700;
+
+    font-size:28px;
+
+}
+
+
+
+.navbar .btn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4F46E5,
+
+        #7C3AED
+
+    );
+
+    transition:.35s;
+
+}
+
+
+
+.navbar .btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*====================================================
+            CARDS
+====================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    transition:.4s;
+
+    box-shadow:
+
+        0 12px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+        0 20px 45px rgba(79,70,229,.15);
+
+}
+
+
+
+/*====================================================
+        CARD SHINE
+====================================================*/
+
+.card{
+
+    position:relative;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    animation:shine 6s infinite;
+
+}
+
+
+
+@keyframes shine{
+
+    100%{
+
+        left:170%;
+
+    }
+
+}
+
+
+
+/*====================================================
+            CARD HEADER
+====================================================*/
+
+.card-header{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4F46E5,
+
+        #7C3AED
+
+    )!important;
+
+    color:#fff!important;
+
+    border:none;
+
+    padding:18px 25px;
+
+}
+
+
+
+.card-header h5{
+
+    margin:0;
+
+    font-weight:600;
+
+}
+
+
+
+/*====================================================
+        STATISTICS CARDS
+====================================================*/
+
+.row.g-4 .card{
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+
+.row.g-4 h6{
+
+    color:#64748b;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.row.g-4 h2{
+
+    font-size:42px;
+
+    font-weight:800;
+
+}
+
+
+
+/*====================================================
+            SEARCH SECTION
+====================================================*/
+
+.form-control,
+
+.form-select{
+
+    border-radius:14px;
+
+    border:2px solid #e2e8f0;
+
+    height:52px;
+
+    box-shadow:none;
+
+}
+
+
+
+.form-control:focus,
+
+.form-select:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:
+
+        0 0 0 4px rgba(79,70,229,.15);
+
+}
+
+
+
+button.btn-primary{
+
+    border:none;
+
+    border-radius:14px;
+
+    height:52px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4F46E5,
+
+        #7C3AED
+
+    );
+
+}
+
+
+
+button.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/*====================================================
+                TABLE
+====================================================*/
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+
+
+.table thead{
+
+    background:#0f172a;
+
+}
+
+
+
+.table thead th{
+
+    color:#fff;
+
+    padding:18px;
+
+    border:none;
+
+    font-size:15px;
+
+}
+
+
+
+.table tbody td{
+
+    padding:18px;
+
+    vertical-align:middle;
+
+}
+
+
+
+.table-hover tbody tr{
+
+    transition:.3s;
+
+}
+
+
+
+.table-hover tbody tr:hover{
+
+    background:#eef4ff;
+
+    transform:scale(1.01);
+
+}
+
+
+
+/*====================================================
+            BADGES
+====================================================*/
+
+.badge{
+
+    padding:8px 15px;
+
+    font-size:13px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+
+
+/*====================================================
+            BUTTONS
+====================================================*/
+
+.btn-sm{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:8px 18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-sm:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.btn-success{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #10B981,
+
+        #34D399
+
+    );
+
+}
+
+
+
+.btn-danger{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #EF4444,
+
+        #DC2626
+
+    );
+
+}
+
+
+
+.btn-primary{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4F46E5,
+
+        #7C3AED
+
+    );
+
+}
+
+
+
+/*====================================================
+            TABLE RESPONSIVE
+====================================================*/
+
+.table-responsive{
+
+    border-radius:18px;
+
+}
+
+
+
+/*====================================================
+            SCROLLBAR
+====================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+        #4F46E5,
+
+        #7C3AED
+
+    );
+
+    border-radius:20px;
+
+}
+
+
+
+/*====================================================
+            ANIMATION
+====================================================*/
+
+.container-fluid{
+
+    animation:fadeIn .7s;
+
+}
+
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*====================================================
+            MOBILE
+====================================================*/
+
+@media(max-width:768px){
+
+    .navbar{
+
+        margin:10px;
+
+        border-radius:15px;
+
+    }
+
+    .navbar h3{
+
+        font-size:22px;
+
+    }
+
+    .row.g-4 .card{
+
+        margin-bottom:20px;
+
+    }
+
+}
