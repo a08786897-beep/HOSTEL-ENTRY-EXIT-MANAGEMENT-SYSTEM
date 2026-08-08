@@ -270,7 +270,9 @@ const students = [
 
 function printdetails() {
     const details = document.querySelector('.card');
+    const totalStudents = document.getElementById('totalStudents');
     let html = "";
+    let count=0;
 
     students.forEach((student) => {
         html += `
@@ -287,12 +289,14 @@ function printdetails() {
                     <p class="card-text">
                         <small class="text-muted">${student.status}</small>
                     </p>
+                    <p class="card-text">Class: ${student.class}</p>
                 </div>
             </div>
         </div>
     </div>
     `;
     });
+    totalStudents.textContent = students.length;
 
     details.innerHTML = html;
 }
