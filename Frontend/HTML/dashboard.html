@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | Hostel Entry &amp; Exit Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../STYLE/app.css">
+</head>
+<body data-page="dashboard">
+<main class="app-shell">
+    <div id="pageNotice" class="alert" role="status" hidden></div>
+    <nav class="app-nav d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <a href="dashboard.html" class="fw-bold fs-5 text-primary">HEMS <span class="text-dark">Portal</span></a>
+        <div class="d-flex flex-wrap align-items-center gap-3">
+            <span class="text-muted">Signed in as <strong data-user-name></strong> · <span data-user-role></span></span>
+            <a data-roles="Student" href="apply-passes.html">Apply</a>
+            <a data-roles="Student" href="my-passes.html">My passes</a>
+            <a data-roles="Admin,Warden" href="studentsDetails.html">Students</a>
+            <a data-roles="Admin,Warden" href="reports.html">Reports</a>
+            <a data-roles="Admin" href="users.html">User roles</a>
+            <a data-roles="SecurityGuard,Admin,Warden" href="movements.html">Movements</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="profile.html">Profile</a>
+            <a href="logout.html" class="btn btn-sm btn-outline-danger">Sign out</a>
+        </div>
+    </nav>
+
+    <header class="mb-4">
+        <h1 class="h3 mb-1" id="welcomeMessage">Dashboard</h1>
+        <p class="text-muted mb-0">Live hostel gate pass and movement activity.</p>
+    </header>
+
+    <section class="row g-3 mb-4" aria-label="Dashboard statistics">
+        <div class="col-6 col-lg-3"><article class="app-card stat-card p-3"><div class="text-muted">Applications</div><div class="stat-value" id="totalPasses">—</div></article></div>
+        <div class="col-6 col-lg-3"><article class="app-card stat-card p-3"><div class="text-muted">Pending</div><div class="stat-value text-warning" id="pendingPasses">—</div></article></div>
+        <div class="col-6 col-lg-3"><article class="app-card stat-card p-3"><div class="text-muted">Approved</div><div class="stat-value text-success" id="approvedPasses">—</div></article></div>
+        <div class="col-6 col-lg-3"><article class="app-card stat-card p-3"><div class="text-muted">Rejected</div><div class="stat-value text-danger" id="rejectedPasses">—</div></article></div>
+        <div class="col-6 col-lg-3"><article class="app-card p-3"><div class="text-muted">Exits today</div><div class="h3 mb-0" id="exitsToday">—</div></article></div>
+        <div class="col-6 col-lg-3"><article class="app-card p-3"><div class="text-muted">Entries today</div><div class="h3 mb-0" id="entriesToday">—</div></article></div>
+        <div class="col-6 col-lg-3" data-roles="Admin,Warden"><article class="app-card p-3"><div class="text-muted">Registered students</div><div class="h3 mb-0" id="studentCount">—</div></article></div>
+        <div class="col-6 col-lg-3" data-roles="Student"><a class="app-card p-3 d-block text-decoration-none" href="apply-passes.html"><span class="text-muted">Need to leave?</span><div class="h5 mt-2 mb-0">Apply for a pass →</div></a></div>
+    </section>
+
+    <section data-roles="SecurityGuard" class="app-card p-4 mb-4">
+        <h2 class="h5">Record student movement</h2>
+        <p class="text-muted">Only approved passes can be used. Record an exit once, then record the matching return.</p>
+        <form id="movementForm" class="row g-3 align-items-end">
+            <div class="col-md-6"><label class="form-label" for="movementPassId">Gate pass ID</label><input class="form-control" id="movementPassId" name="passId" required placeholder="Paste the full pass ID"></div>
+            <div class="col-md-3"><label class="form-label" for="movementAction">Movement</label><select class="form-select" id="movementAction" name="action"><option value="exit">Record exit</option><option value="entry">Record entry</option></select></div>
+            <div class="col-md-3"><button class="btn btn-primary w-100" type="submit">Record movement</button></div>
+        </form>
+        <div id="movementMessage" class="mt-3" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="app-card p-4 mb-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div><h2 class="h5 mb-1">Recent gate pass applications</h2><p class="text-muted small mb-0">Records are loaded from the connected database.</p></div>
+            <a data-roles="Student" href="apply-passes.html" class="btn btn-primary">New application</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead><tr><th>Pass</th><th>Student</th><th>Type</th><th>Destination</th><th>Exit time</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody id="recentPasses"><tr><td colspan="7">Loading...</td></tr></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="app-card p-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h5 mb-0">Latest notifications</h2><a href="notifications.html">View all</a>
+        </div>
+        <ul class="list-group list-group-flush" id="latestNotifications"><li class="list-group-item">Loading...</li></ul>
+    </section>
+</main>
+<script src="../SCRIPT/api.js"></script>
+<script src="../SCRIPT/portal.js"></script>
+</body>
+</html>

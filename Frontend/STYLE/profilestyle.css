@@ -1,0 +1,407 @@
+/*====================================================
+                GOOGLE FONT
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*====================================================
+                BODY
+====================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#eef4ff,#f8fbff,#edf7ff);
+
+    color:#1e293b;
+
+}
+
+/*====================================================
+                NAVBAR
+====================================================*/
+
+.navbar{
+
+    background:rgba(255,255,255,.9)!important;
+
+    backdrop-filter:blur(15px);
+
+    margin:20px;
+
+    padding:18px 30px!important;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.navbar h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+/*====================================================
+                CARD
+====================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 55px rgba(79,70,229,.18);
+
+}
+
+/*====================================================
+                SHINE EFFECT
+====================================================*/
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    animation:shine 6s infinite;
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        left:170%;
+
+    }
+
+}
+
+/*====================================================
+                HEADER
+====================================================*/
+
+.card-header{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4F46E5,
+
+        #7C3AED
+
+    )!important;
+
+    border:none;
+
+    padding:20px;
+
+}
+
+.card-header h5{
+
+    color:#fff;
+
+    font-weight:600;
+
+    margin:0;
+
+}
+
+/*====================================================
+            PROFILE IMAGE
+====================================================*/
+
+#profileImage{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #fff;
+
+    box-shadow:0 15px 35px rgba(79,70,229,.25);
+
+    transition:.4s;
+
+}
+
+#profileImage:hover{
+
+    transform:scale(1.05) rotate(3deg);
+
+}
+
+/*====================================================
+                FILE INPUT
+====================================================*/
+
+#imageInput{
+
+    margin-top:15px;
+
+    border-radius:12px;
+
+}
+
+/*====================================================
+                LABEL
+====================================================*/
+
+.form-label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#334155;
+
+}
+
+/*====================================================
+                INPUTS
+====================================================*/
+
+.form-control{
+
+    border-radius:14px;
+
+    border:2px solid #E2E8F0;
+
+    height:52px;
+
+    transition:.35s;
+
+    box-shadow:none;
+
+}
+
+.form-control:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.12);
+
+}
+
+/*====================================================
+                BUTTON
+====================================================*/
+
+.btn-success{
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:12px 28px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #10B981,
+
+        #34D399
+
+    );
+
+    transition:.35s;
+
+}
+
+.btn-success:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(16,185,129,.35);
+
+}
+
+/*====================================================
+            UPDATED PROFILE
+====================================================*/
+
+hr{
+
+    margin:35px 0;
+
+}
+
+.mt-4 h5{
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#4F46E5;
+
+}
+
+.mt-4 p{
+
+    background:#F8FAFC;
+
+    padding:15px 20px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    border-left:5px solid #4F46E5;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.mt-4 b{
+
+    color:#1E293B;
+
+}
+
+/*====================================================
+                SCROLLBAR
+====================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+        #4F46E5,
+
+        #7C3AED
+
+    );
+
+    border-radius:20px;
+
+}
+
+/*====================================================
+                PAGE ANIMATION
+====================================================*/
+
+.container{
+
+    animation:fadeIn .7s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*====================================================
+                RESPONSIVE
+====================================================*/
+
+@media(max-width:768px){
+
+    .navbar{
+
+        margin:10px;
+
+    }
+
+    #profileImage{
+
+        width:140px;
+
+        height:140px;
+
+        margin-bottom:20px;
+
+    }
+
+    .card{
+
+        margin:15px;
+
+    }
+
+}
